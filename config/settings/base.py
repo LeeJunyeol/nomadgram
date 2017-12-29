@@ -111,7 +111,14 @@ MANAGERS = ADMINS
 # Uses django-environ to accept uri format
 # See: https://django-environ.readthedocs.io/en/latest/#supported-types
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://localhost/nomadgram'),
+    # 'default': env.db('DATABASE_URL', default='postgres://localhost/nomadgram'),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'localhost',
+        'NAME': 'nomadgram',
+        'USER': 'postgres',
+        'PASSWORD': 'vkqduf!2#4'
+    }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
