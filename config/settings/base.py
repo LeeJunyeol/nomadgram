@@ -117,7 +117,7 @@ DATABASES = {
         'HOST': 'localhost',
         'NAME': 'nomadgram',
         'USER': 'postgres',
-        'PASSWORD': 'vkqduf!2#4'
+        'PASSWORD': 'postgres'
     }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
