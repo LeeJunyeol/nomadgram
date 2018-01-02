@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b6a03456cb7b99a483e60c6de4744c982b5b4066b3dc6de08979ee0de2840f93"
+            "sha256": "4c7ce0a674c156c8494538a9b059bd729e0fdd145e583b2705a45b827fa0a9c2"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -66,10 +66,10 @@
         },
         "attrs": {
             "hashes": [
-                "sha256:e7d51b70f19a4da5fe6b3c9938983e0af3b91e230edc504bd73c443d98037063",
-                "sha256:c78f53e32d7cf36d8597c8a2c7e3c0ad210f97b9509e152e4c37fa80869f823c"
+                "sha256:a17a9573a6f475c99b551c0e0a812707ddda1ec9653bed04c13841404ed6f450",
+                "sha256:1c7960ccfd6a005cd9f7ba884e6316b5e430a3f1a6c37c5f87d8b43f83b54ec9"
             ],
-            "version": "==17.3.0"
+            "version": "==17.4.0"
         },
         "awesome-slugify": {
             "hashes": [
@@ -266,6 +266,13 @@
                 "sha256:b0289208b8325a959c2316bc5f54e082f518f7305424db32c70ac16d612fa839"
             ],
             "version": "==1.0.21"
+        },
+        "djangorestframework": {
+            "hashes": [
+                "sha256:1f6baf40ed456ed2af6bd1a4ff8bbc3503cebea16509993aea2b7085bc097766",
+                "sha256:9f9e94e8d22b100ed3a43cee8c47a7ff7b185e778a1f2da9ec5c73fc4e081b87"
+            ],
+            "version": "==3.7.7"
         },
         "docutils": {
             "hashes": [
