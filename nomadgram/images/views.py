@@ -18,5 +18,20 @@ class Feed(APIView):
     serializer = serializers.ImageSerializer(sorted_list, many=True)
     return Response(serializer.data)
 
-# def get_key(image):
-#   return image.created_at
+class LikeImage(APIView):
+  def get(self, request, image_id, format=None):
+    user = request.user
+
+    try:
+      found_image = models.Image.objects.get(id=image_id)
+    except models.Image.DoesNotExist:
+      return Response(status=404)
+
+    new_like = models.Like.objects.create(
+      creator = user,
+      image = found_image
+    )
+
+    new_like.save()
+
+    return Response(status=200)
