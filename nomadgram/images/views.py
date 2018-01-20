@@ -45,16 +45,24 @@ class LikeImage(APIView):
 
 
 class UnLikeImage(APIView):
-  def post(self, request, image_id, format=None):
+  def delete(self, request, image_id, format=None):
     user = request.user
+
+    try:
+      found_image = models.Image.objects.get(id=image_id)
+    except models.Image.DoesNotExist:
+      return Response(status=status.HTTP_404_NOT_FOUND)
 
     try:
       preexisting_like = models.Like.objects.get(
           creator=user,
           image=found_image
       )
+
       preexisting_like.delete()
+
       return Response(status=status.HTTP_204_NO_CONTENT)
+
     except models.Like.DoesNotExist:
       return Response(status=status.HTTP_304_NOT_MODIFIED)
 
