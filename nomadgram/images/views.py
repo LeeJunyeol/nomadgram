@@ -68,14 +68,14 @@ class CommentOnImage(APIView):
     except models.Image.DoesNotExist:
       return Response(status=status.HTTP_404_NOT_FOUND)
 
-    serializers = serializers.CommentSerializer(data=request.data)
+    serializer = serializers.CommentSerializer(data=request.data)
 
-    if serializers.is_valid:
-      serializers.save(creator=user, image=found_image)
-      return Response(data=serializers.data, status=status.HTTP_200_OK)
+    if serializer.is_valid():
+      serializer.save(creator=user, image=found_image)
+      return Response(data=serializer.data, status=status.HTTP_200_OK)
 
     else:
-      return Response(data=serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+      return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class Comment(APIView):
   def delete(self, request, comment_id, format=None):
