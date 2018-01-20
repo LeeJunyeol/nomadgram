@@ -305,3 +305,4 @@ pip-selfcheck.json
 
 nomadgram/media/
 
+config/settings/base.py
