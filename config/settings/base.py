@@ -8,6 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 import environ
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 ROOT_DIR = environ.Path(__file__) - 3  # (nomadgram/config/settings/base.py - 3 = nomadgram/)
 APPS_DIR = ROOT_DIR.path('nomadgram')
@@ -114,11 +117,11 @@ MANAGERS = ADMINS
 DATABASES = {
     # 'default': env.db('DATABASE_URL', default='postgres://localhost/nomadgram'),
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',
         'NAME': 'nomadgram',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres'
+        'USER': 'root',
+        'PASSWORD': 'vkqduf!2#4'
     }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
