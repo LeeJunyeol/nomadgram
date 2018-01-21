@@ -19,6 +19,11 @@ urlpatterns = [
         name='follow_user'
     ),
     url(
+        regex=r'^search/$',
+        view=views.Search.as_view(),
+        name='search'
+    ),
+    url(
         regex=r'^(?P<username>\w+)/$',
         view=views.UserProfile.as_view(),
         name='user_profile'
@@ -33,5 +38,4 @@ urlpatterns = [
         view=views.UserFollowings.as_view(),
         name='user_followings'
     )
-
 ]
