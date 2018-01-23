@@ -287,3 +287,16 @@ ADMIN_URL = r'^admin/'
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
 TAGGIT_CASE_INTENSIVE = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication', # JWT 인증
+        'rest_framework.authentication.SessionAuthentication', # 쿠키 인증
+        'rest_framework.authentication.BasicAuthentication', # 기본 인증
+        # 인증 방법은 많을 수록 좋다.
+        # JWT는 앱, 프런트앤드에 사용하고, 나머지 두개는 관리자용으로 사용하면 좋다.
+    ),
+}
