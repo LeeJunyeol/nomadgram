@@ -64,3 +64,13 @@ class ImageSerializer(serializers.ModelSerializer):
       'creator'
     )
 
+class InputImageSerializer(serializers.ModelSerializer):
+  # file = serializers.FileField(required=False)
+
+  class Meta:
+    model = models.Image
+    fields = (
+      'file',
+      'location',
+      'caption'
+    )
