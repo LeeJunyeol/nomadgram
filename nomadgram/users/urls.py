@@ -37,5 +37,10 @@ urlpatterns = [
         regex=r'^(?P<username>\w+)/followings/$',
         view=views.UserFollowings.as_view(),
         name='user_followings'
+    ),
+    url(
+        regex=r'^(?P<username>\w+)/password/$',
+        view=views.ChangePassword.as_view(),
+        name='change'
     )
 ]
