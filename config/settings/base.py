@@ -52,7 +52,8 @@ THIRD_PARTY_APPS = [
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'rest_framework', # REST framework
-    'taggit' # Tags for the photos
+    'taggit', # Tags for the photos
+    'taggit_serializer' # tag serializer
 ]
 
 # Apps specific for this project go here.
@@ -294,7 +295,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication', # JWT 인증
-        'rest_framework.authentication.SessionAuthentication', # 쿠키 인증
+        'rest_framework.authentication.SessionAuthentication', # 세션 인증
         'rest_framework.authentication.BasicAuthentication', # 기본 인증
         # 인증 방법은 많을 수록 좋다.
         # JWT는 앱, 프런트앤드에 사용하고, 나머지 두개는 관리자용으로 사용하면 좋다.
