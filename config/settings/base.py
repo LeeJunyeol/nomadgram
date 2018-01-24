@@ -53,7 +53,10 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',  # registration
     'rest_framework', # REST framework
     'taggit', # Tags for the photos
-    'taggit_serializer' # tag serializer
+    'taggit_serializer', # tag serializer
+    'rest_framework.authtoken',
+    'rest_auth', # rest auth
+    'rest_auth.registration', # enable registration
 ]
 
 # Apps specific for this project go here.
@@ -265,8 +268,8 @@ AUTHENTICATION_BACKENDS = [
 
 # Some really nice defaults
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'nomadgram.users.adapters.AccountAdapter'
@@ -275,8 +278,8 @@ SOCIALACCOUNT_ADAPTER = 'nomadgram.users.adapters.SocialAccountAdapter'
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'users:redirect'
-LOGIN_URL = 'account_login'
+# LOGIN_REDIRECT_URL = 'users:redirect'
+# LOGIN_URL = 'account_login'
 
 # SLUGLIFIER
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
@@ -295,9 +298,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication', # JWT 인증
-        'rest_framework.authentication.SessionAuthentication', # 세션 인증
-        'rest_framework.authentication.BasicAuthentication', # 기본 인증
-        # 인증 방법은 많을 수록 좋다.
-        # JWT는 앱, 프런트앤드에 사용하고, 나머지 두개는 관리자용으로 사용하면 좋다.
     ),
 }
+
+REST_USE_JWT = True
