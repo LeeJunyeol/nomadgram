@@ -162,7 +162,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   modules: true,
-                  localIdentName: '[local]--[hash:base64:5]',
+                  localIdentName: "[local]--[hash:base64:5]"
                 }
               },
               {
@@ -189,7 +189,8 @@ module.exports = {
               {
                 loader: require.resolve("sass-loader"),
                 options: {
-                  sourceMap: true
+                  sourceMap: true,
+                  data: `@import "C:/Users/jylee/myGitRepository/nomadgram/frontend/src/config/_variables.scss";`
                 }
               }
             ]
