@@ -8,25 +8,25 @@ const Auth = (props, context) => (
       <img src={require("images/phone.png")} alt="Checkout our app. Is cool" />
     </div>
     <div className={styles.column}>
-    <div className={`${styles.whiteBox} ${styles.formBox}`}>
-      <img src={require("images/logo.png")}  alt="Logo" />
-      {props.action === "login" && <LoginForm />}
-      {props.action === "signup" && <SignupForm />}
-    </div>
+      <div className={`${styles.whiteBox} ${styles.formBox}`}>
+        <img src={require("images/logo.png")} alt="Logo" />
+        {props.action === "login" && <LoginForm />}
+        {props.action === "signup" && <SignupForm />}
+      </div>
       <div className={styles.whiteBox}>
-        {props.action === "login" && (
-          <p>
-            Don't have an account?{" "}
-            <span className={styles.changeLink} onClick={props.changeAction}>
-              Sign up
-            </span>
-          </p>
-        )}
         {props.action === "signup" && (
-          <p>
+          <p className={styles.text}>
             Have an account?{" "}
             <span className={styles.changeLink} onClick={props.changeAction}>
               Log in
+            </span>
+          </p>
+        )}
+        {props.action === "login" && (
+          <p className={styles.text}>
+            Don't have an account?{" "}
+            <span className={styles.changeLink} onClick={props.changeAction}>
+              Sign up
             </span>
           </p>
         )}
@@ -47,5 +47,4 @@ const Auth = (props, context) => (
     </div>
   </main>
 );
-
 export default Auth;
