@@ -208,9 +208,10 @@ module.exports = {
                       loader: require.resolve("sass-loader"),
                       options: {
                         sourceMap: true,
-                        data: `@import "${
-                          paths.appSrc
-                        }/config/_variables.scss";`
+                        // data: `@import "${
+                        //   paths.appSrc
+                        // }/config/_variables.scss";`
+                        data: `@import "C:/Users/jylee/myGitRepository/nomadgram/frontend/src/config/_variables.scss";`
                       }
                     }
                   ]
