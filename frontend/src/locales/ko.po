@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+
+"Language: ko\n"
+
+"Content-Type: text/plain; charset=UTF-8\n"
+"plural-forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/components/Auth/presenter.js
+msgid "Have an account?"
+msgstr "계정이 있으신가요?"
+
+#: src/components/Auth/presenter.js
+msgid "Log in"
+msgstr "로그인"
+
+#: src/components/Auth/presenter.js
+msgid "Don't have an account?"
+msgstr "계정이 없으신가요?"
+
+#: src/components/Auth/presenter.js
+msgid "Sign up"
+msgstr "회원가입"
+
+#: src/components/Auth/presenter.js
+msgid "Get the app"
+msgstr "앱을 다운로드하세요"
+
+#: src/components/Footer/index.js
+msgid "About Us"
+msgstr "인스타그램 정보"
+
+#: src/components/Footer/index.js
+msgid "Support"
+msgstr "지원"
+
+#: src/components/Footer/index.js
+msgid "Blog"
+msgstr "블로그"
+
+#: src/components/Footer/index.js
+msgid "Press"
+msgstr "홍보 센터"
+
+#: src/components/Footer/index.js
+msgid "API"
+msgstr ""
+
+#: src/components/Footer/index.js
+msgid "Jobs"
+msgstr "채용 정보"
+
+#: src/components/Footer/index.js
+msgid "Privacy"
+msgstr "개인정보처리방침"
+
+#: src/components/Footer/index.js
+msgid "Terms"
+msgstr "약관"
+
+#: src/components/Footer/index.js
+msgid "Directory"
+msgstr "디렉터리"
+
+#: src/components/Footer/index.js
+msgid "Language"
+msgstr "언어"
+
