@@ -50,6 +50,6 @@ const Auth = (props, context) => (
 );
 export default Auth;
 
-Auth.contextType = {
+Auth.contextTypes = {
   t: PropTypes.func.isRequired
 }

@@ -22,7 +22,7 @@ export const LoginForm = (props, context) => (
   </div>
 );
 
-LoginForm.contextType = {
+LoginForm.contextTypes = {
   t: PropTypes.func.isRequired
 }
 
@@ -56,6 +56,6 @@ export const SignupForm = (props, context) => (
   </div>
 );
 
-SignupForm.contextType = {
+SignupForm.contextTypes = {
   t: PropTypes.func.isRequired
 }
